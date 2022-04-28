@@ -130,9 +130,6 @@ namespace FirstApp
             Console.WriteLine("#4");
             using (norContext db = new norContext())
             {
-                var dists = (from u in db.Stations
-                             select u).ToList();
-
                 //деление на зоны, каждые 2 км -новая зона,
                 //будем считать число станций, попавших в нее
                 for (int i = 2; i < 18; i += 2)
