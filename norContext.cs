@@ -44,10 +44,10 @@ namespace FirstApp
 
                 entity.Property(e => e.Name).IsRequired();
 
-                entity.HasOne(d => d.DirectionNavigation)
-                    .WithMany(p => p.Stations)
-                    .HasForeignKey(d => d.Direction)
-                    .HasConstraintName("FK_Station");
+                //entity.HasOne(d => d.DirectionNavigation)
+                //    .WithMany(p => p.Stations)
+                //    .HasForeignKey(d => d.Direction)
+                //    .HasConstraintName("FK_Station");
             });
 
             OnModelCreatingPartial(modelBuilder);
